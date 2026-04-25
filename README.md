@@ -3,7 +3,7 @@
 for running kexec
 
 ```bash
-sudo kexec -l vmlinuz --initrd=initrd --append="ip=dhcp autoinstall 'ds=nocloud-net;s=http://192.168.40.22:8081/'"
+sudo kexec -l vmlinuz --initrd=initrd --append="ip=dhcp autoinstall cloud-config-url=http://192.168.40.22:8081/user-data ds=nocloud-net\;s=http://192.168.40.22:8081/"
 sudo systemctl kexec
 ```
 
